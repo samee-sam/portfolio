@@ -1,0 +1,316 @@
+/* Variable Definitions */
+:root {
+  --primary-lavender: #9c27b0;
+  --light-lavender: #f3e5f5;
+  --soft-purple: #e1bee7;
+  --dark-text: #4a148c;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-lavender);
+  color: var(--dark-text);
+}
+
+/* Before and After Decorators */
+body::before {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: var(--soft-purple);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  z-index: -1;
+  filter: blur(80px);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: #d1c4e9;
+  border-radius: 50%;
+  bottom: -150px;
+  right: -100px;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+/* Navbar with Glass Effect */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 12px 30px;
+  background: var(--primary-lavender);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  background: var(--dark-text);
+}
+
+/* Section Title Decoration (Before/After) */
+.section-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-lavender);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Cards & Layout */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.card {
+  background: var(--glass-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--soft-purple);
+}
+/* General Styles & Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #9575cd;      /* Lavender Main */
+  --secondary: #673ab7;    /* Deep Purple */
+  --light: #f3e5f5;        /* Light Lavender Background */
+  --text: #311b92;         /* Dark Purple Text */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Before/After Background Decorations */
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(149, 117, 205, 0.4), transparent);
+  z-index: -1;
+  filter: blur(50px);
+  animation: float 10s infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -100px;
+  left: -50px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(103, 58, 183, 0.3), transparent);
+  z-index: -1;
+  filter: blur(60px);
+  animation: float 12s infinite alternate-reverse;
+}
+
+@keyframes float {
+  from { transform: translate(0, 0); }
+  to { transform: translate(50px, 50px); }
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: 0.4s;
+}
+
+.nav-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* Section Title with Animated After Element */
+.section-title {
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--secondary);
+  transition: width 0.8s ease;
+}
+
+.reveal.active .section-title::after {
+  width: 80px;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 15px 30px;
+  background: var(--secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 25px;
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-download:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
